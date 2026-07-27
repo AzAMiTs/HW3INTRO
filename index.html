@@ -4,14 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout</title>
+    <title>LINS</title>
     <link rel="stylesheet" href="/css/style.css">
-  
+    <style>
+        .suggest {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        article h2.h1 {
+            text-align: center;
+            margin-top: 10px;
+        }
+        h2.h2{
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <h3>LIN SHOP</h3>
+        <b>LIN SHOP</b>
     </header>
 
     <section>
@@ -27,30 +41,69 @@
         </nav>
         <nav class="n2">
             <ul>
-                <li><a href="/index.html">เสื้อผ้า</a></li>
-                <li><a href="">รองเท้า</a></li>
-                <li><a href="">กระเป๋า</a></li>
-                <li><a href="">อุปกรณ์ไอที</a></li>
-                <li><a href="">ของแต่งบ้าน</a></li>
+                <a href="/index.html">
+                    <li>เสื้อผ้า</li>
+                </a>
+                <a href="/index.html">
+                    <li>รองเท้า</li>
+                </a>
+                <a href="/index.html">
+                    <li>กระเป๋า</li>
+                </a>
+                <a href="/index.html">
+                    <li>อุปกรณ์ไอที</li>
+                </a>
+                <a href="/index.html">
+                    <li>ของแต่งบ้าน</li>
+                </a>
             </ul>
         </nav>
 
         <article>
-            <table border="1">
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>6</td>
-                </tr>
-            </table>
-            <br>
+
+            <h2 class="h1">LIN SHOP</h2>
+            <p style="text-align: center;">
+                มีสินค้าหลายหมวดหมู่<br>
+                เช่น เสื้อผ้า รองเท้า กระเป๋า อุปกรณ์ไอที ของแต่งบ้าน<br>
+                ราคาสบายกระเป๋า ใช้งานง่าย รวดเร็วทันใจ<br>
+            </p>
+            <h2 class="h2">สินค้าแนะนำ</h2>
+            <div class="container">
+                <div class="suggest">
+                    <a href="product-detail-1.html">
+                        <div class="box">
+                            <div class="box-img">
+                                <img src="img/clothe-3.jpg" alt="">
+                            </div>
+                            <div class="box-content">
+                                <h3>เสื้อยืดสกรีนข้อความ</h3>
+                                <p style="color:red">฿20</p>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="img/device-2.jpg" alt="">
+                        </div>
+                        <div class="box-content">
+                            <h3>Macbook Neo</h3>
+                            <p style="color:red">฿26990</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="img/bag-1.jpg" alt="">
+                        </div>
+                        <div class="box-content">
+                            <h3>กระเป๋าถุงผ้า</h3>
+                            <p style="color:red">฿500</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
             <!-- table>tr*3>td*2 -->
 
 
