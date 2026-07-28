@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial;
 }
 
 a {
@@ -18,8 +18,9 @@ header {
     background-color: rgb(23, 72, 136);
 }
 
+
 nav.n1 {
-    background: rgb(185, 217, 255);
+    background: rgb(82, 211, 243);
     float: left;
     width: 100%;
 }
@@ -37,18 +38,18 @@ nav.n1 ul li a {
 }
 
 nav.n1 ul li a:hover {
-    background: #747272;
+    background: #5e5e5e;
 }
 
 nav.n2 {
-    background: rgb(185, 217, 255);
+   background: rgb(82, 211, 243);
     float: left;
     width: 200px;
-   
+
 }
 
 nav.n2 ul li {
-    padding: 20px 20px 15px; 
+    padding: 20px 20px 15px;
     font-size: 18px;
 }
 
@@ -59,7 +60,7 @@ nav.n2 ul a li {
 }
 
 nav.n2 ul li:hover {
-    background: #747272;
+    background: #5e5e5e;
 
 }
 
@@ -282,12 +283,15 @@ p {
 
 footer {
     width: 100%;
-    height: 250px;
+    height: 110;
     clear: both;
     background: #333;
     color: white;
     text-align: center;
     padding: 30px;
+    /* position: fixed;
+    bottom: 0px;
+    left: 0px; */
 }
 
 
