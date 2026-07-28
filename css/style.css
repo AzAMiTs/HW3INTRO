@@ -97,7 +97,7 @@ article {
 
 .box .box-content {
     padding: 10px;
-    
+
 }
 
 
@@ -258,12 +258,15 @@ td {
 }
 
 .cart-bottom button {
-    background-color: rgba(128, 255, 0, 0.782);
-    color: black;
+    background-color: rgba(41, 39, 175, 0.782);
+    color: rgb(255, 255, 255);
+    float: right;
+
+
 }
 
 .cart-bottom button:hover {
-    background-color: rgb(85, 170, 0);
+    background-color: rgb(250, 22, 98);
 }
 
 .box-container {
