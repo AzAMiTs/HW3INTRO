@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <b>LIN SHOP</b>
+    </header>
+    <nav class="n1">
+        <ul>
+            <li><a href="/index.html">หน้าแรก</a></li>
+            <li><a href="/product.html">สินค้าทั้งหมด</a></li>
+            <li><a href="/cart.html">ตะกร้าสินค้า</a></li>
+            <li><a href="">ยืนยันการสั่งซื้อ</a></li>
+            <li><a href="">ติดต่อเรา</a></li>
+
+        </ul>
+    </nav>
+    <nav class="n2">
+        <ul>
+            <a href="/shirt.html">
+                <li>เสื้อผ้า</li>
+            </a>
+            <a href="/shoes.html">
+                <li>รองเท้า</li>
+            </a>
+            <a href="/bag.html">
+                <li>กระเป๋า</li>
+            </a>
+            <a href="/gadgetit.html">
+                <li>อุปกรณ์ไอที</li>
+            </a>
+            <a href="/home.html">
+                <li>ของแต่งบ้าน</li>
+            </a>
+        </ul>
+    </nav>
+    <article>
+        <h1 style="padding: 20px;">ตระกร้าสินค้า</h1>
+        <div class="cart">
+            <table>
+                <tr>
+                    <th>ที่</th>
+                    <th>สินค้า</th>
+                    <th>รูป</th>
+                    <th>ราคา</th>
+                    <th>จำนวน</th>
+                    <th>รวม</th>
+                    <th>ลบ</th>
+                </tr>
+                <tr id="row1">
+                    <td>1</td>
+                    <td>เสื้อยืดสกรีนข้อความ</td>
+                    <td>
+                        <img src="/image/shirt/sh1.jpg" style="width: 100px; height: 100px;">
+                    </td>
+                    <td>฿3,200</td>
+                    <td><input type="number" name="" id="qty" value="1" min="1"></td>
+                    <td id="sum">฿3,200</td>
+                    <td><button onclick="del()">ลบ</button></td>
+                </tr>
+            </table>
+            <div class="cart-bottom">
+                <a href="confirm.html"><button>ซื้อ</button></a>
+            </div>
+        </div>
+    </article>
+    <footer>
+        <div class="footer-info">
+            <b>ติดต่อเรา LINS</b> <br> <br>
+            <label for="">โทร : 012-123-1234</label> &nbsp;
+            <label for="">Email : linshop@gmail.com</label> &nbsp;
+            <label for="">Facebook : LIN SHOP</label> &nbsp; <br><br>
+            <label for="">&copy; 2026 LIN SHOP. All Rights Reserved.</label>
+        </div>
+    </footer>
+
+    <script>
+        qty = document.getElementById("qty")
+        sum = document.getElementById("sum")
+        qty.oninput = function () {
+            let total = qty.value * 3200
+            sum.innerHTML = "฿" + total.toLocaleString();
+        };
+        function del() {
+            document.getElementById("row1").remove();
+        }
+    </script>
+
+</body>
+
+</html>
