@@ -42,7 +42,7 @@ nav.n1 ul li a:hover {
 }
 
 nav.n2 {
-   background: rgb(82, 211, 243);
+    background: rgb(82, 211, 243);
     float: left;
     width: 200px;
 
@@ -74,11 +74,14 @@ article {
     padding: 5px 50px;
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .box {
     width: 250px;
-    height: 300px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
     border-radius: 5%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px 5px;
@@ -94,8 +97,39 @@ article {
 
 .box .box-content {
     padding: 10px;
+    
 }
 
+
+.price-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+
+.price-detail p {
+    margin: 0;
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.price-detail a {
+    margin: 0;
+    padding: 0;
+    background: none;
+    color: #ff0000;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.price-detail a:hover {
+    color: #0e4a8f;
+    text-decoration: underline;
+}
 
 .box .box-content h3 {
     margin-top: 5px;
