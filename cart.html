@@ -17,7 +17,7 @@
             <li><a href="/index.html">หน้าแรก</a></li>
             <li><a href="/product.html">สินค้าทั้งหมด</a></li>
             <li><a href="/cart.html">ตะกร้าสินค้า</a></li>
-            <li><a href="">ยืนยันการสั่งซื้อ</a></li>
+            <li><a href="/confirm.html">ยืนยันการสั่งซื้อ</a></li>
             <li><a href="">ติดต่อเรา</a></li>
 
         </ul>
@@ -44,31 +44,35 @@
     <article>
         <h1 style="padding: 20px;">ตระกร้าสินค้า</h1>
         <div class="cart">
-            <table>
-                <tr>
-                    <th>ที่</th>
-                    <th>สินค้า</th>
-                    <th>รูป</th>
-                    <th>ราคา</th>
-                    <th>จำนวน</th>
-                    <th>รวม</th>
-                    <th>ลบ</th>
-                </tr>
-                <tr id="row1">
-                    <td>1</td>
-                    <td>เสื้อยืดสกรีนข้อความ</td>
-                    <td>
-                        <img src="/image/shirt/sh1.jpg" style="width: 100px; height: 100px;">
-                    </td>
-                    <td>฿3,200</td>
-                    <td><input type="number" name="" id="qty" value="1" min="1"></td>
-                    <td id="sum">฿3,200</td>
-                    <td><button onclick="del()">ลบ</button></td>
-                </tr>
-            </table>
-            <div class="cart-bottom">
-                <a href="confirm.html"><button>ซื้อ</button></a>
-            </div>
+            <form action="/confirm.html" method="GET">
+                <table>
+                    <tr>
+                        <th>ที่</th>
+                        <th>สินค้า</th>
+                        <th>รูป</th>
+                        <th>ราคา</th>
+                        <th>จำนวน</th>
+                        <th>รวม</th>
+                        <th>ลบ</th>
+                    </tr>
+                    <tr id="row1">
+                        <td>1</td>
+                        <td>เสื้อยืดสกรีนข้อความ</td>
+                        <td>
+                            <img src="/image/shirt/sh1.jpg" style="width: 100px; height: 100px;">
+                        </td>
+                        <td>฿3,200</td>
+                        <td><input type="number" name="qty" id="qty" value="1" min="1"></td>
+                        <td id="sum">฿3,200</td>
+                        <input type="hidden" name="sum" id="sumValue" value="3200">
+                        <td><button onclick="del()">ลบ</button></td>
+
+                    </tr>
+                </table>
+                <div class="cart-bottom">
+                    <button type="submit">ซื้อ</button>
+                </div>
+            </form>
         </div>
     </article>
     <footer>
@@ -84,9 +88,11 @@
     <script>
         qty = document.getElementById("qty")
         sum = document.getElementById("sum")
+        sumValue = document.getElementById("sumValue");
         qty.oninput = function () {
             let total = qty.value * 3200
             sum.innerHTML = "฿" + total.toLocaleString();
+            sumValue.value = total;
         };
         function del() {
             document.getElementById("row1").remove();
